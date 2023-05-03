@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npx parcel serve src/index.pug src/audio.mp3  --dist-dir build/",
-    "build": "npx parcel build src/index.pug --dist-dir build/"
+    "build": "npx parcel build src/index.pug src/audio.mp3 --dist-dir build/"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.3",
