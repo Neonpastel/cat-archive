@@ -4,25 +4,24 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Neon Pastel
+        title Neonpastel.net
         link(rel="stylesheet", href="style.scss")
 
-        script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js") 
-        //script(src="http://unpkg.com/tone") 
     body
-        aside#music 
-            
+        div#background
+            include background.svg
+        
+
+        header
+            h1 Neonpastel.net 
+
+
 
         main 
-            h1 Neonpastel
-            button#start Start
-            audio#audio(src="audio.mp3")
-            img#gif(src="burgerfinal.gif", alt="")
+
+    script(src="index.js") 
+            
 
 
-            script(src="libgif.js")
-            script(src="music.js" type="module")
-            script(src="index.js")
 
-            // Move gif by beat
 

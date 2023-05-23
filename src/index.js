@@ -1,14 +1,9 @@
-/*
-const player = new Tone.Player({
-    url: "audio.mp3"
-}).toDestination();
-*/
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+document.getElementById("background").style.left = "100vw";
+document.getElementById("background").style.transform = "rotate(500deg)";
 
 
-$("#start").click(async()=> {
-    //$("#audio")[0].play();
-
-    //await Tone.start()
-    //await player.start();
-});
-
+//$("#background").style("left", "100vw");
