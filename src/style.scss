@@ -7,10 +7,87 @@
 
 }
 
+html {
+    height: 100%;
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
+
+@keyframes bouncing-background {
+    0% {
+        background-position-y: center;
+    }
+
+    
+    25% {
+        background-position-y: calc(50% + 5px);
+    }
+
+    50% {
+        background-position-y: 50%;
+    }
+
+    75% {
+        background-position-y: calc(50% - 5px);
+    }
+
+    100% {
+        background-position-y: 50%;
+    }
+
+
+}
+
 body {
     background-image: url("tile.gif");
     color: white;
+    background-repeat: repeat-x;
+
+    background-position: center center;
+
+
+    animation-name: bouncing-background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+    background-size: auto 110%;
+
+    &.first {
+        background-image: url("../assets/sky/01-05.png");
+    }
+
+    &.second {
+        background-image: url("../assets/sky/06-10.png");
+    }
+
+    &.third {
+        background-image: url("../assets/sky/11-13.png");
+    }
+
+    &.fourth {
+        background-image: url("../assets/sky/14-16.png");
+    }
+
+    &.fifth {
+        background-image: url("../assets/sky/17-18.png");
+    }
+
+    &.sixth {
+        background-image: url("../assets/sky/19-21.png");
+    }
+
+    &.seventh {
+        background-image: url("../assets/sky/22-24.png");
+    }
 }
+
+
 
 main {
     padding: 50px;
@@ -23,4 +100,18 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     @include neon-box;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 80%;
+    overflow: hidden;
+    .plant {
+        position: absolute;
+        bottom: 0px;
+        max-height: 100%;
+    }
 }

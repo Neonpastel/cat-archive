@@ -1,0 +1,98 @@
+html {
+  height: 100%;
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+}
+
+@keyframes bouncing-background {
+  0% {
+    background-position-y: center;
+  }
+
+  25% {
+    background-position-y: calc(50% + 5px);
+  }
+
+  50% {
+    background-position-y: 50%;
+  }
+
+  75% {
+    background-position-y: calc(50% - 5px);
+  }
+
+  100% {
+    background-position-y: 50%;
+  }
+}
+
+body {
+  color: #fff;
+  background-image: url("tile.1d20d5b3.gif");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: auto 110%;
+  animation-name: bouncing-background;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+body.first {
+  background-image: url("01-05.64735356.png");
+}
+
+body.second {
+  background-image: url("06-10.1b0a0c80.png");
+}
+
+body.third {
+  background-image: url("11-13.fe3d2a13.png");
+}
+
+body.fourth {
+  background-image: url("14-16.87ac99c7.png");
+}
+
+body.fifth {
+  background-image: url("17-18.97f994e3.png");
+}
+
+body.sixth {
+  background-image: url("19-21.9609407e.png");
+}
+
+body.seventh {
+  background-image: url("22-24.8c622266.png");
+}
+
+main {
+  padding: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 0 5px #0ff, 0 1px 30px #8a2be2;
+  margin: 0;
+}
+
+p {
+  background-color: #00ffff67;
+  box-shadow: 0 0 15px #0ff;
+}
+
+footer {
+  position: absolute;
+  inset: 80% 0 0;
+  overflow: hidden;
+}
+
+footer .plant {
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=index.b2d9cf43.css.map */
