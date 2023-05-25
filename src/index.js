@@ -14,13 +14,13 @@ let date = new Date();
 
 let hours = date.getHours();
 const backgrounds = [
-    [1, 5, "first"],
+    [0, 5, "first"],
     [6, 10, "second"],
     [11, 13, "third"],
     [14, 16, "fourth"],
     [17, 18, "fifth"],
     [19, 21, "sixth"],
-    [22, 24, "seventh"]
+    [22, 23, "seventh"],
 ];
 
 for (let i=0; i < backgrounds.length; i++) {
