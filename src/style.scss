@@ -11,15 +11,15 @@ $animation-length: 60 * 5s;
 }
 
 #background {
-    width: 200vw;
-    height: 200vh;
     position: absolute;
-    left: -100vw;
-    top: -100vh;
-    transition: left $animation-length, top $animation-length, transform $animation-length;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
 }
 
-#background path {
+svg * {
     stroke: $primary !important;
     fill: $primary !important;
 }
