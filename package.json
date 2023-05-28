@@ -1,8 +1,7 @@
 {
   "scripts": {
     "start": "npx parcel serve src/index.pug",
-    "build": "npx parcel build src/index.pug",
-    "build:gitlab": "npx parcel build src/index.pug --dist-dir public/"
+    "build": "npx parcel build src/index.pug"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.3",
