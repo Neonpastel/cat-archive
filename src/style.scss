@@ -115,3 +115,8 @@ footer {
         max-height: 100%;
     }
 }
+
+#time {
+    cursor: e-resize;
+    user-select: none;
+}

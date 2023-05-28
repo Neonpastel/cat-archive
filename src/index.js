@@ -26,7 +26,7 @@ function clearSkies(hours) {
         let botMargin, topMargin, className;
         [botMargin, topMargin, className] = backgrounds[i];
         if (botMargin <= hours && hours <= topMargin) {
-            document.body.className += className;
+            document.body.className = className;
         }
     }
 }
@@ -43,13 +43,34 @@ function hoursChanged() {
 }
 
 function secondTimer() {
-    timeElement.text(`${date.getHours()}:${date.getMinutes()}`);
+    timeElement.text(`${date.getHours()}:${String(date.getMinutes()).padStart(2, 0)}`);
     
     if (currentHour != date.getHours()) {
         hoursChanged();
     }
 }
 
+timeElement.on("mousedown", (e) => {
+    let startX = e.originalEvent.x;
+    function dragTime(e) {
+        console.log(e);
+        const newX = e.originalEvent.x;
+        let difference = newX - startX;
+
+        // Modify it so the time moves more accurately
+        difference /= 3;
+
+        date.setMinutes(date.getMinutes() + difference)
+
+        startX = newX;
+    }
+
+    let body = $(document.body);
+    body.on("mousemove", dragTime);
+    body.on("mouseup", () => {
+        body.off("mousemove", dragTime)
+    })
+})
 
 hoursChanged();
 plantPlants();
