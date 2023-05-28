@@ -1,12 +1,12 @@
 // Import wasn't supported
 const fs = require("fs");
 
-const plantDir = "assets/plants/";
+const plantDir = "src/plants/img/";
 
 
 
 function PlacePlant(filename) {
-    const src = "../" + plantDir + filename;
+    const src = plantDir + filename;
     return `<img src="${src}" class="plant" />`;
 }
 
