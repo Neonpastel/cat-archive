@@ -1,21 +1,13 @@
 {
   "scripts": {
     "start": "npx parcel serve src/index.pug",
-    "build": "npx parcel build src/index.pug"
+    "build": "npx parcel build src/index.pug",
+    "build:gitlab": "npx parcel build src/index.pug --dist-dir public/"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.3",
     "@parcel/transformer-raw": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
-    "buffer": "^5.7.1",
-    "events": "^3.3.0",
-    "music-beat-detector": "^0.1.1",
-    "parcel": "^2.8.3",
-    "process": "^0.11.10"
-  },
-  "dependencies": {
-    "beat-beat-js": "^0.0.0",
-    "tone": "^14.7.77",
-    "web-audio-beat-detector": "^8.1.46"
+    "parcel": "^2.8.3"
   }
 }
