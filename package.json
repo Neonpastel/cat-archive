@@ -7,6 +7,7 @@
     "@parcel/transformer-pug": "^2.8.3",
     "@parcel/transformer-raw": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
+    "howler": "^2.2.3",
     "parcel": "^2.8.3"
   }
 }

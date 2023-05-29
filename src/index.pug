@@ -13,13 +13,18 @@ html(lang="en")
             h1 Neonpastel
             span#time
 
-        main 
+        include music/music.pug
+
+        main
             
         
         footer 
             :flowers
 
         script(src="utils.js") 
+
         script(src="plants/plants.js")
         script(src="skies/skies.js") 
+        script(src="music/music.js" type="module")
+        
         script(src="timer.js") 
