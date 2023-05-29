@@ -35,66 +35,28 @@
     background-image: url("grass.png");
 }
 
-.first {
-    .skies {
-        background-image: url("themes/skies/01-05.png");
+@mixin theme($name, $background, $hue) {
+    .#{$name} {
+        .skies {
+            background-image: url("themes/skies/#{$background}");
+        }
+        .grass {
+            filter: hue-rotate($hue);
+        }
     }
-    .grass {
-        filter: hue-rotate(80deg);
-    }
+
 }
 
-.second {
-    .skies {
-        background-image: url("themes/skies/06-10.png");
-    }
-    .grass {
-        filter: hue-rotate(50deg);
-    }
-}
+@include theme("first", "01-05.png", 80deg);
+@include theme("second", "06-10.png", 50deg);
+@include theme("third", "11-13.png", 150deg);
+@include theme("fourth", "14-16.png", 120deg);
+@include theme("fifth", "17-18.png", 200deg);
+@include theme("sixth", "19-21.png", 140deg);
+@include theme("seventh", "22-24.png", 15deg);
 
-.third {
-    .skies {
-        background-image: url("themes/skies/11-13.png");
-    }
-    .grass {
-        filter: hue-rotate(150deg);
-    }
-}
-
-.fourth {
-    .skies {
-        background-image: url("themes/skies/14-16.png");
-    }
-    .grass {
-        filter: hue-rotate(120deg);
-    }
-}
 
 .fifth {
     color: black;
-    .skies {
-        background-image: url("themes/skies/17-18.png");
-    }
-    .grass {
-        filter: hue-rotate(200deg);
-    }
 }
 
-.sixth {
-    .skies {
-        background-image: url("themes/skies/19-21.png");
-    }
-    .grass {
-        filter: hue-rotate(140deg);
-    }
-}
-
-.seventh {
-    .skies {
-        background-image: url("themes/skies/22-24.png");
-    }
-    .grass {
-        filter: hue-rotate(15deg);
-    }
-}
