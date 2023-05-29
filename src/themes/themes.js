@@ -1,5 +1,5 @@
-const skiesElement = $("header");
-const backgrounds = [
+const body = $(document.body);
+const themes = [
     [0, 5, "first"],
     [6, 10, "second"],
     [11, 13, "third"],
@@ -9,12 +9,12 @@ const backgrounds = [
     [22, 23, "seventh"],
 ];
 
-function clearSkies(hours) {
-    for (let i=0; i < backgrounds.length; i++) {
+function applyThemes(hours) {
+    for (let i=0; i < themes.length; i++) {
         let botMargin, topMargin, className;
-        [botMargin, topMargin, className] = backgrounds[i];
+        [botMargin, topMargin, className] = themes[i];
         if (botMargin <= hours && hours <= topMargin) {
-            skiesElement.attr("class", className);
+            body.attr("class", className);
         }
     }
 }

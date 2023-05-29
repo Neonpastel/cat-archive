@@ -5,7 +5,7 @@ const timeElement = $("#time");
 let currentHour = -1;  // Set invalid hour so that hourChange can run once
 function hoursChanged() {
     currentHour = date.getHours();
-    clearSkies(currentHour);
+    applyThemes(currentHour);
 }
 
 function secondTimer() {

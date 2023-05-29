@@ -1,0 +1,100 @@
+@keyframes bouncing-background {
+    0% {
+        background-position-y: center;
+    }
+
+    25% {
+        background-position-y: calc(50% + 5px);
+    }
+
+    50% {
+        background-position-y: 50%;
+    }
+
+    75% {
+        background-position-y: calc(50% - 5px);
+    }
+
+    100% {
+        background-position-y: 50%;
+    }
+}
+
+.skies {
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-size: auto 110%;
+
+    animation-name: bouncing-background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.grass {
+    background-image: url("grass.png");
+}
+
+.first {
+    .skies {
+        background-image: url("themes/skies/01-05.png");
+    }
+    .grass {
+        filter: hue-rotate(80deg);
+    }
+}
+
+.second {
+    .skies {
+        background-image: url("themes/skies/06-10.png");
+    }
+    .grass {
+        filter: hue-rotate(50deg);
+    }
+}
+
+.third {
+    .skies {
+        background-image: url("themes/skies/11-13.png");
+    }
+    .grass {
+        filter: hue-rotate(150deg);
+    }
+}
+
+.fourth {
+    .skies {
+        background-image: url("themes/skies/14-16.png");
+    }
+    .grass {
+        filter: hue-rotate(120deg);
+    }
+}
+
+.fifth {
+    color: black;
+    .skies {
+        background-image: url("themes/skies/17-18.png");
+    }
+    .grass {
+        filter: hue-rotate(200deg);
+    }
+}
+
+.sixth {
+    .skies {
+        background-image: url("themes/skies/19-21.png");
+    }
+    .grass {
+        filter: hue-rotate(140deg);
+    }
+}
+
+.seventh {
+    .skies {
+        background-image: url("themes/skies/22-24.png");
+    }
+    .grass {
+        filter: hue-rotate(15deg);
+    }
+}
