@@ -8,29 +8,6 @@
 @mixin neon-box {
     box-shadow: 0px 0px 15px aqua;
     background-color: rgba(0, 255, 255, 0.404);
-
-}
-
-html {
-    height: 100%;
-}
-
-html, body {
-    min-height: 100%;
-    margin: 0;
-}
-
-
-body {
-    font-family: "happyMonkey", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("tile.gif");
-    color: white;
-
-    @include skies;
-}
-
-main {
-    padding: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,6 +19,41 @@ p {
     @include neon-box;
 }
 
+html {
+    height: 100%;
+    &, body {
+        min-height: 100%;
+        margin: 0;
+    }
+}
+
+body {
+    font-family: "happyMonkey", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("tile.gif");
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    #time {
+        cursor: e-resize;
+        user-select: none;
+    }
+
+    @include skies;
+
+    flex-grow: 6;
+}
+
+main {
+    padding: 50px;
+    flex-grow: 4;
+
+    background-image: url("grass.png");
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -51,7 +63,3 @@ footer {
     overflow: hidden;
 }
 
-#time {
-    cursor: e-resize;
-    user-select: none;
-}
