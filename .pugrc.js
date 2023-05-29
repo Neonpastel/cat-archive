@@ -6,7 +6,7 @@ const plantDir = "src/plants/img/";
 
 
 function PlacePlant(filename) {
-    const src = plantDir + filename;
+    const src = plantDir.replace("src/", "") + filename;
     return `<img src="${src}" class="plant" />`;
 }
 
