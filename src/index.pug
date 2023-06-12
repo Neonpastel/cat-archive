@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Neon Pastel
+        title Neonpastel.net
         link(rel="stylesheet", href="style.scss")
 
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js") 
@@ -14,24 +14,15 @@ html(lang="en")
             span#time
 
         main.grass
-            span.
-                Hi<br>
-                I hope you're doing well &lt;3
-            br
-            br
-            span.
-                There'll be links and stuff here in the future<br>
-                To other projects I'm working on, sites I think are neat<br>
-                And resources I've used<br>
-                Oh, you can at already find the repo for this website
-            a(href="https://github.com/denperidge/neonpastel.net") here
-
-            br
-            br
-            span Have a nice day!
-
+            article#intro 
+                include:markdown-it sections/intro.md
             
-        
+            br
+
+            article#about 
+                include:markdown-it sections/about.md
+            
+
         footer 
             :flowers
 
