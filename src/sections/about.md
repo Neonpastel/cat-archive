@@ -21,4 +21,12 @@ My personal video creation project. Currently mostly videos talking about mental
 
 
 ## Compromised Neopets Password
-My lyrics transcription + web info + archival psuedonym/project/thing! Check it out at [compromisedneopetspassword.neonpastel.net](https://compromisedneopetspassword.neonpastel.net/)
+My lyrics transcription + web info + archival psuedonym/project/thing! It currently consists of the following parts parts:
+
+- Lyrics transcription & contributions; I listen to some more obscure music, and sometimes that means lyrics are hard to find. As a user of Spotify (sad trombone sound) but lover of Musixmatch, I quite like adding & syncing lyrics on there. But I'm also trying to add them to other platforms because they aren't paying me.
+- Software archival; whenever I find an old DVD in my possesion, I throw it on there.
+- Wiki contributions; sometimes I look at a wiki and see that it could be made better! Occasionally worse.
+
+You can view the website [here](https://compromisedneopetspassword.neonpastel.net/)! 
+
+You can contact me for this at compromisedneopetspassword \[at\] proton \[dot\] me
