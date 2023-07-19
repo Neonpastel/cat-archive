@@ -1,3 +1,4 @@
+
 const body = $(document.body);
 const themes = [
     [0, 5, "first"],
@@ -15,6 +16,25 @@ function applyThemes(hours) {
         [botMargin, topMargin, className] = themes[i];
         if (botMargin <= hours && hours <= topMargin) {
             body.attr("class", className);
+
+            const imageUrl = $(".skies").css("background-image").replace("url(\"", "").replace("\")", "");
+            
+            if (window.extractColors) {
+                window.extractColors(imageUrl , {distance: 0}).then((values) => {
+                    console.log(values);
+                    $(".themed").css({
+                        color: values[0].hex,
+                        backgroundColor: values[1].hex
+                    });
+                });
+                
+            } else {
+                console.log("Awaiting extract");
+                setTimeout(function(){
+                    applyThemes(hours)
+                }, 100)
+            }
+
         }
     }
 }

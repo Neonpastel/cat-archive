@@ -1,5 +1,5 @@
 mixin nav(title)
-    li
+    li.themed
         h2=title
         block
     
@@ -13,6 +13,8 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Neonpastel.net
         link(rel="stylesheet", href="style.scss")
+
+        script(src="import.js" type="module")
 
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js") 
     body
