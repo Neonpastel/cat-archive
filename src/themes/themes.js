@@ -10,6 +10,11 @@ const themes = [
     [22, 23, "seventh"],
 ];
 
+// Hide until theme is applied
+$(".themed").css({
+    visibility: "hidden"
+});
+
 function applyThemes(hours) {
     for (let i=0; i < themes.length; i++) {
         let botMargin, topMargin, className;
@@ -23,8 +28,9 @@ function applyThemes(hours) {
                 window.extractColors(imageUrl , {distance: 0}).then((values) => {
                     console.log(values);
                     $(".themed").css({
+                        visibility: "initial",
                         color: values[0].hex,
-                        backgroundColor: values[1].hex
+                        backgroundColor: values[1].hex,
                     });
                 });
                 

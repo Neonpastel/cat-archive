@@ -34,19 +34,26 @@ nav {
     min-height: 200vh;
     margin: auto;
     width: 70%;
+    padding-top: 100px;
     > ul {
         height: 100vh;
         display: grid;
-        grid-gap: 50px;
+        gap: 50px;
         grid-template-columns: repeat(auto-fill, 30%);
+        @media (orientation: portrait) {
+            grid-template-columns: 1fr;
+        }
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
+
+        
+        word-wrap: break-word;
 
         > li {
-            background: rgb(253, 253, 253);
-            color: rgb(34, 34, 34);
             padding: 20px;
-            height: 200px;
+
+            min-height: 200px;
+            height: fit-content;
             border-radius: 5px;
         }
     }
