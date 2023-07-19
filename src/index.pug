@@ -11,7 +11,6 @@ html(lang="en")
         link(rel="stylesheet", href="style.scss")
 
         script(src="import.js" type="module")
-
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js") 
     body
         nav
@@ -51,14 +50,16 @@ html(lang="en")
 
                         Have a nice day!
 
-                
+                +music
+
                 br
 
             footer 
                 each plant in plants
                     img(src=plant class="plant")
 
-        script(src="utils.js") 
+        script(src="utils.js")
         script(src="plants/plants.js")
-        script(src="themes/themes.js") 
+        script(src="themes/themes.js")
+        script(src="music/music.js")
         script(src="timer.js") 

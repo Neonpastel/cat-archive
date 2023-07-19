@@ -18,11 +18,13 @@ function collectFiles(dir, read=false) {
 
 const navs = collectFiles(srcDir + "nav/", read=true);
 const plants = collectFiles(srcDir + "plants/img/", read=false);
+const songs = collectFiles(srcDir + "music/songs/", read=false);
 
 
 module.exports = {
     locals: {
-        navs: navs,
-        plants: plants
+        navs,
+        plants,
+        songs
     }
 }

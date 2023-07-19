@@ -1,6 +1,7 @@
 @import "fonts/fonts";
 @import "plants/plants.scss";
 @import "themes/themes.scss";
+@import "music/music.scss";
 
 @mixin neon-text {
     text-shadow: 0px 0px 5px aqua, 0px 1px 30px blueviolet;
@@ -80,7 +81,7 @@ main {
     }
 
 
-    section {
+    > section {
         flex-grow: 4;
         padding: 50px;
         padding-bottom: 180px;
