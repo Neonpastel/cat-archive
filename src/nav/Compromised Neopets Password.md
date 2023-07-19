@@ -1,3 +1,4 @@
 My lyrics transcription + web info + archival psuedonym/project/thing!
 
-You can view the website [here](https://compromisedneopetspassword.neonpastel.net/)! 
+You can read more about it on [compromisedneopets
+password.neonpastel.net](https://compromisedneopetspassword.neonpastel.net/)! 

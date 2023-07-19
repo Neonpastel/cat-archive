@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "start": "npx parcel serve src/index.pug",
-    "build": "npx parcel build src/index.pug"
+    "clean": "rm -f .parcel-cache/*",
+    "start": "npm run clean && npx parcel serve src/index.pug",
+    "build": "npm run clean && npx parcel build src/index.pug"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.8.3",
