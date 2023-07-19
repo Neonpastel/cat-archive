@@ -1,33 +1,28 @@
 // Import wasn't supported
 const fs = require("fs");
-//const  = require("jstransformer-markdown-it")
-//var md = require('jstransformer')(require('jstransformer-markdown-it'));
-const plantDir = "src/plants/img/";
+const srcDir = "src/";
 
-const navs = [];
+function collectFiles(dir, read=false) {
+    const array = []
+    fs.readdirSync(dir).forEach((filename) => {
+        const filepath = dir + filename;
 
-fs.readdirSync("src/nav/").forEach((file) => {
-    navs.push(fs.readFileSync("src/nav/" + file, {encoding: "utf-8"}));
-});
-
-
-function PlacePlant(filename) {
-    const src = plantDir.replace("src/", "") + filename;
-    return `<img src="${src}" class="plant" />`;
+        if (!read) {
+            array.push(filepath.replace(srcDir, ""));
+        } else {
+            array.push(fs.readFileSync(filepath, {encoding: "utf-8"}));
+        }
+    });
+    return array;
 }
+
+const navs = collectFiles(srcDir + "nav/", read=true);
+const plants = collectFiles(srcDir + "plants/img/", read=false);
+
 
 module.exports = {
     locals: {
-        navs: navs
-    },
-    filters: {
-        flowers: function () {
-            let filenames = fs.readdirSync(plantDir);
-            let plants = "";
-            filenames.forEach((filename) => {
-                plants += PlacePlant(filename);
-            })
-            return plants;
-        }
+        navs: navs,
+        plants: plants
     }
 }

@@ -1,9 +1,5 @@
-mixin nav(title)
-    li.themed
-        h2=title
-        block
-    
-    
+include nav/nav
+include music/music
 
 doctype html
 html(lang="en")
@@ -59,7 +55,8 @@ html(lang="en")
                 br
 
             footer 
-                :flowers
+                each plant in plants
+                    img(src=plant class="plant")
 
         script(src="utils.js") 
         script(src="plants/plants.js")
