@@ -1,8 +1,14 @@
 // Import wasn't supported
 const fs = require("fs");
-
+//const  = require("jstransformer-markdown-it")
+//var md = require('jstransformer')(require('jstransformer-markdown-it'));
 const plantDir = "src/plants/img/";
 
+const navs = [];
+
+fs.readdirSync("src/nav/").forEach((file) => {
+    navs.push(fs.readFileSync("src/nav/" + file, {encoding: "utf-8"}));
+});
 
 
 function PlacePlant(filename) {
@@ -11,6 +17,9 @@ function PlacePlant(filename) {
 }
 
 module.exports = {
+    locals: {
+        navs: navs
+    },
     filters: {
         flowers: function () {
             let filenames = fs.readdirSync(plantDir);

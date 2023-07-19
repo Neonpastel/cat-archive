@@ -12,14 +12,8 @@
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    @include neon-text;
+    //@include neon-text;
 }
-
-/*
-p {
-    @include neon-box;
-}
-*/
 
 html {
     height: 100%;
@@ -37,6 +31,29 @@ body {
 
     display: flex;
     flex-direction: column;
+}
+
+nav {
+    min-height: 200vh;
+    margin: auto;
+    width: 70%;
+    > ul {
+        height: 100vh;
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: repeat(auto-fill, 30%);
+        justify-content: center;
+        align-items: center;
+
+        > li {
+            background: rgb(253, 253, 253);
+            color: rgb(34, 34, 34);
+            padding: 20px;
+            height: 200px;
+            border-radius: 5px;
+        }
+    }
+    
 }
 
 header {

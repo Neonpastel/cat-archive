@@ -1,3 +1,10 @@
+mixin nav(title)
+    li
+        h2=title
+        block
+    
+    
+
 doctype html
 html(lang="en")
     head
@@ -9,6 +16,22 @@ html(lang="en")
 
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js") 
     body
+        nav
+            ul
+                +nav("Denperidge")
+                    include:markdown-it nav/Denperidge.md
+                +nav("Neonpastel.net")
+                    include:markdown-it nav/Neonpastel.md
+                +nav("Skunkat")
+                    include:markdown-it nav/Skunkat.md
+                +nav("Thannasanna")
+                    include:markdown-it nav/Thannasanna.md
+                +nav("Compromised Neopets Password")
+                    include:markdown-it nav/Compromised Neopets Password.md
+                +nav("Knowledgebase")
+                    include:markdown-it nav/Knowledgebase.md
+
+
         header.skies 
             h1 Neonpastel
             span#time
@@ -19,12 +42,8 @@ html(lang="en")
             
             br
 
-            article#about 
-                include:markdown-it sections/about.md
-            
-
-        footer 
-            :flowers
+            footer 
+                :flowers
 
         script(src="utils.js") 
         script(src="plants/plants.js")
