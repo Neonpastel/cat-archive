@@ -32,13 +32,13 @@
 }
 
 .grass {
-    background-image: url("grass.png");
+    background-image: url("/images/grass.png");
 }
 
 @mixin theme($name, $background, $hue) {
     .#{$name} {
         .skies {
-            background-image: url("themes/skies/#{$background}");
+            background-image: url("/images/skies/#{$background}");
         }
         .grass {
             filter: hue-rotate($hue);

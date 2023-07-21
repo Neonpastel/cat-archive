@@ -1,4 +1,4 @@
-include nav/nav
+include nav
 include music/music
 
 doctype html
@@ -16,17 +16,17 @@ html(lang="en")
         nav
             ul
                 +nav("Denperidge")
-                    include:markdown-it nav/Denperidge.md
+                    include:markdown-it ../nav/Denperidge.md
                 +nav("Neonpastel.net")
-                    include:markdown-it nav/Neonpastel.md
+                    include:markdown-it ../nav/Neonpastel.md
                 +nav("Skunkat")
-                    include:markdown-it nav/Skunkat.md
+                    include:markdown-it ../nav/Skunkat.md
                 +nav("Thannasanna")
-                    include:markdown-it nav/Thannasanna.md
+                    include:markdown-it ../nav/Thannasanna.md
                 +nav("Compromised Neopets Password")
-                    include:markdown-it nav/Compromised Neopets Password.md
+                    include:markdown-it ../nav/Compromised Neopets Password.md
                 +nav("Knowledgebase")
-                    include:markdown-it nav/Knowledgebase.md
+                    include:markdown-it ../nav/Knowledgebase.md
 
 
 
@@ -59,7 +59,7 @@ html(lang="en")
                     img(src=plant class="plant")
 
         script(src="utils.js")
-        script(src="plants/plants.js")
+        script(src="garden/plants.js")
         script(src="themes/themes.js")
         script(src="music/music.js")
-        script(src="timer.js") 
+        script(src="themes/timer.js") 

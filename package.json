@@ -6,7 +6,7 @@
   },
 
   "staticFiles": {
-    "staticPath": "src/music/songs/"
+    "staticPath": "./songs/"
   },
 
   "devDependencies": {

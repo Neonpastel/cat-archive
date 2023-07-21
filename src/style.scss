@@ -1,5 +1,5 @@
-@import "fonts/fonts";
-@import "plants/plants.scss";
+@import "fonts";
+@import "garden/plants.scss";
 @import "themes/themes.scss";
 @import "music/music.scss";
 
@@ -28,7 +28,7 @@ body {
     color: white;
     text-align: center;
     font-family: "happyMonkey", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("tile.gif");
+    background-image: url("/images/tile.gif");
 }
 
 nav {
