@@ -1,7 +1,7 @@
-@import "fonts";
-@import "garden/plants.scss";
-@import "themes/themes.scss";
-@import "music/music.scss";
+@import "../fonts/fonts";
+@import "../2-themes/themes";
+@import "../3-music/music";
+@import "../4-garden/plants";
 
 @mixin neon-text {
     text-shadow: 0px 0px 5px aqua, 0px 1px 30px blueviolet;
@@ -28,7 +28,7 @@ body {
     color: white;
     text-align: center;
     font-family: "happyMonkey", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("/images/tile.gif");
+    background-image: url("tile.gif");
 }
 
 nav {

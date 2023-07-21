@@ -1,5 +1,5 @@
-include nav
-include music/music
+include 1-nav/nav
+include 3-music/music
 
 doctype html
 html(lang="en")
@@ -8,25 +8,25 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Neonpastel.net
-        link(rel="stylesheet", href="style.scss")
+        link(rel="stylesheet", href="index/style.scss")
 
-        script(src="import.js" type="module")
+        script(src="index/import.js" type="module")
         script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js") 
     body
         nav
             ul
                 +nav("Denperidge")
-                    include:markdown-it ../nav/Denperidge.md
+                    include:markdown-it 1-nav/Denperidge.md
                 +nav("Neonpastel.net")
-                    include:markdown-it ../nav/Neonpastel.md
+                    include:markdown-it 1-nav/Neonpastel.md
                 +nav("Skunkat")
-                    include:markdown-it ../nav/Skunkat.md
+                    include:markdown-it 1-nav/Skunkat.md
                 +nav("Thannasanna")
-                    include:markdown-it ../nav/Thannasanna.md
+                    include:markdown-it 1-nav/Thannasanna.md
                 +nav("Compromised Neopets Password")
-                    include:markdown-it ../nav/Compromised Neopets Password.md
+                    include:markdown-it 1-nav/Compromised Neopets Password.md
                 +nav("Knowledgebase")
-                    include:markdown-it ../nav/Knowledgebase.md
+                    include:markdown-it 1-nav/Knowledgebase.md
 
 
 
@@ -58,8 +58,8 @@ html(lang="en")
                 each plant in plants
                     img(src=plant class="plant")
 
-        script(src="utils.js")
-        script(src="garden/plants.js")
-        script(src="themes/themes.js")
-        script(src="music/music.js")
-        script(src="themes/timer.js") 
+        script(src="index/utils.js")
+        script(src="2-themes/themes.js")
+        script(src="3-music/music.js")
+        script(src="4-garden/plants.js")
+        script(src="index/timer.js") 

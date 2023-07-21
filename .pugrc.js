@@ -18,9 +18,9 @@ function collectFiles(dir, read=false, includePath=true) {
     return array;
 }
 
-const navs = collectFiles("nav/", read=true);
-const plants = collectFiles("images/plants/", read=false);
-const songs = collectFiles("songs/", read=false, includePath=false);
+const navs = collectFiles("src/1-nav/", read=true);
+const plants = collectFiles("src/4-garden/plants/", read=false);
+const songs = collectFiles("src/3-music/songs/", read=false, includePath=false);
 
 
 module.exports = {
