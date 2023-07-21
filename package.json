@@ -4,6 +4,7 @@
     "start": "npx parcel serve src/index.pug",
     "build": "npx parcel build src/index.pug"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "staticFiles": {
     "staticPath": "./src/3-music/songs/"
   },
