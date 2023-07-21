@@ -1,0 +1,39 @@
+nav {
+    margin: auto;
+    padding-top: 100px;
+
+    width: 70%;
+
+    @media (max-width: 600px) {
+        width: 100%;
+
+    }
+
+    > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        list-style: lower-alpha;
+
+        margin-bottom: 60vh;
+        gap: 100px;
+
+        word-wrap: break-word;
+        padding: 0;
+        transition: flex 1s;
+        
+
+        > li {
+            padding: 20px;
+
+            max-width: 300px;
+            flex-grow: 1;
+
+            height: fit-content;
+            border-radius: 5px;
+        }
+
+    }
+    
+}

@@ -1,4 +1,5 @@
 @import "../fonts/fonts";
+@import "../1-nav/nav";
 @import "../2-themes/themes";
 @import "../3-music/music";
 @import "../4-garden/plants";
@@ -30,37 +31,6 @@ body {
     font-family: $fontstack;
     background-image: url("tile.gif");
 }
-
-nav {
-    min-height: 200vh;
-    margin: auto;
-    width: 70%;
-    padding-top: 100px;
-    > ul {
-        height: 100vh;
-        display: grid;
-        gap: 50px;
-        grid-template-columns: repeat(auto-fill, 30%);
-        @media (orientation: portrait) {
-            grid-template-columns: 1fr;
-        }
-        justify-content: center;
-        align-items: baseline;
-
-        
-        word-wrap: break-word;
-
-        > li {
-            padding: 20px;
-
-            min-height: 200px;
-            height: fit-content;
-            border-radius: 5px;
-        }
-    }
-    
-}
-
 
 
 main {
