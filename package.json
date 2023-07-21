@@ -1,16 +1,22 @@
 {
   "scripts": {
-    "clean": "rm -f .parcel-cache/*",
+    "clean": "rm -f .parcel-cache/* && rm -f dist/*",
     "start": "npx parcel serve src/index.pug",
     "build": "npx parcel build src/index.pug"
   },
+
+  "staticFiles": {
+    "staticPath": "src/music/songs/"
+  },
+
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.8.3",
+    "@parcel/transformer-pug": "^2.9.3",
     "@parcel/transformer-raw": "^2.9.3",
-    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-sass": "^2.9.3",
     "extract-colors": "^3.0.0",
     "howler": "^2.2.3",
     "jstransformer-markdown-it": "^3.0.0",
-    "parcel": "^2.8.3"
+    "parcel": "^2.9.3",
+    "parcel-reporter-static-files-copy": "^1.5.0"
   }
 }

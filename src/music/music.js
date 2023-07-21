@@ -3,14 +3,18 @@ const volume = $("#volume");
 const nowPlaying = $("#nowPlaying");
 const songName = $("#songName");
 
+let songIndex;
 let sound;
+const songs = [];
+JSON.parse($("#music").attr("data-songs")).forEach((path) => {
+    songs.push(path);
+});
 
 function random(min, max) {
     // See https://www.w3schools.com/JS/js_random.asp
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-let songIndex;
 
 
 // Playlist functionality based on https://github.com/goldfire/howler.js/issues/191
