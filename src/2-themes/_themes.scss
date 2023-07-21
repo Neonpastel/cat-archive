@@ -41,7 +41,8 @@
             background-image: url("../2-themes/skies/#{$background}");
         }
         .grass {
-            filter: hue-rotate($hue);
+            
+            //filter: hue-rotate($hue);
         }
     }
 

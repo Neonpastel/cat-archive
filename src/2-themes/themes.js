@@ -27,10 +27,28 @@ function applyThemes(hours) {
             if (window.extractColors) {
                 window.extractColors(imageUrl , {distance: 0}).then((values) => {
                     console.log(values);
-                    $(".themed").css({
+
+                    const mainColour = new Color(values[0].hex);
+                    let secondaryColour;
+                    let secondaryColourContrast = 0;  // Higher is better
+                    let tertiaryColour;
+                    for (let i = 1; i < values.length; i++) {
+                        let colour = new Color(values[i].hex);
+                        let contrast = mainColour.contrast(colour, "WCAG21");
+                        console.log(`${contrast} > ${secondaryColourContrast}`)
+                        if (contrast > secondaryColourContrast) {
+                            [ secondaryColour, secondaryColourContrast] = [ colour, contrast];
+                        } else {
+                            tertiaryColour = colour;
+                        }
+                    }
+
+                    $(".themed, .themed a:link").css({
                         visibility: "initial",
-                        color: values[0].hex,
-                        backgroundColor: values[1].hex,
+                        color: mainColour,
+                        "background-color": secondaryColour,
+                        "accent-color": tertiaryColour,
+                        "border-color": tertiaryColour,
                     });
                 });
                 

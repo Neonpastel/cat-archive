@@ -4,15 +4,14 @@
     "start": "npx parcel serve src/index.pug",
     "build": "npx parcel build src/index.pug"
   },
-
   "staticFiles": {
     "staticPath": "./src/3-music/songs/"
   },
-
   "devDependencies": {
     "@parcel/transformer-pug": "^2.9.3",
     "@parcel/transformer-raw": "^2.9.3",
     "@parcel/transformer-sass": "^2.9.3",
+    "colorjs.io": "^0.4.5",
     "extract-colors": "^3.0.0",
     "howler": "^2.2.3",
     "jstransformer-markdown-it": "^3.0.0",

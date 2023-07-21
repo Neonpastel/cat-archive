@@ -27,7 +27,7 @@ html {
 body {
     color: white;
     text-align: center;
-    font-family: "happyMonkey", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $fontstack;
     background-image: url("tile.gif");
 }
 

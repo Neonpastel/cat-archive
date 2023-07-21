@@ -1,11 +1,11 @@
 mixin music           
     section#music(data-songs=songs)
-        button#prev &lt;
-        button#play play
-        button#nowPlaying
+        button#prev.themed &lt;
+        button#play.themed play
+        button#nowPlaying.themed
             span Now playing:
             span#songNameContainer
                 span#songName   
-        .range 
+        .range.themed
             input#volume(type="range" value=10)
-        button#next &gt;
+        button#next.themed &gt;
