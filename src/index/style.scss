@@ -41,9 +41,14 @@ main {
 
 
     header {
+        :first-child {
+            margin-top: 50px;
+        }
         #time {
+            text-decoration: underline;
             cursor: e-resize;
             user-select: none;
+            font-size: large;
         }
     
         min-height: 460px;
