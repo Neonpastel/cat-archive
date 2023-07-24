@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "clean": "rm -f .parcel-cache/* && rm -f dist/*",
+    "clean": "rm -rf .parcel-cache/* && rm -rf dist/*",
     "start": "npx parcel serve src/index.pug",
     "build": "npx parcel build src/index.pug --no-optimize"
   },

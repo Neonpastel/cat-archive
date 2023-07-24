@@ -7,7 +7,7 @@ let songIndex;
 let sound;
 const songs = [];
 JSON.parse($("#music").attr("data-songs")).forEach((path) => {
-    songs.push(path);
+    songs.push("songs/" + path);
 });
 
 // Playlist functionality based on https://github.com/goldfire/howler.js/issues/191
@@ -19,7 +19,7 @@ function playSong() {
     }
 
     let file = songs[songIndex];
-    let artist = file.substring(0, file.indexOf("-") - 1)
+    let artist = file.substring(file.indexOf("/") + 1, file.indexOf("-") - 1)
     let track = file.substring(file.indexOf("-") + 1, file.lastIndexOf("."))
 
     songName.text(`${track} by ${artist}`);
