@@ -32,17 +32,24 @@
 }
 
 .grass {
-    background-image: url("grass.png");
+    position: relative;
+    .background {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: url("grass.png");
+        z-index: -50;
+    }
 }
-
+ 
 @mixin theme($name, $background, $hue) {
     .#{$name} {
         .skies {
             background-image: url("../2-themes/skies/#{$background}");
         }
         .grass {
-            
-            //filter: hue-rotate($hue);
+            .background {
+                filter: hue-rotate($hue);
+            }
         }
     }
 
