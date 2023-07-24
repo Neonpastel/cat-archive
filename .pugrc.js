@@ -20,7 +20,7 @@ function collectFiles(dir, read=false, includePath=true) {
 
 const navs = collectFiles("src/1-nav/", read=true);
 const plants = collectFiles("src/4-garden/plants/", read=false);
-const songs = collectFiles("src/3-music/songs/", read=false, includePath=false);
+const songs = collectFiles("static/songs/", read=false, includePath=false);
 
 
 module.exports = {
