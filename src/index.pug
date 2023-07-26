@@ -55,7 +55,8 @@ html(lang="en")
                         Have a nice day!
                 
 
-                +music 
+                +music()
+                div#music
 
                 div.background
 
@@ -67,6 +68,9 @@ html(lang="en")
 
         script(src="index/utils.js")
         script(src="2-themes/themes.js")
-        script(src="3-music/music.js")
+        //script(src="3-music/music.js")
+        script(src="../howler-playlist-player/dist/howler-playlist-player.js")
         script(src="4-garden/plants.js")
-        script(src="index/timer.js") 
+        script(src="index/timer.js")
+        script.
+            howlerplaylistplayer("music", ["songs/brakence - ginger tea.mp3"])
