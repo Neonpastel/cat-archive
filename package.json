@@ -1,8 +1,8 @@
 {
   "scripts": {
     "clean": "rm -rf .parcel-cache/* && rm -rf dist/*",
-    "start": "npx parcel serve src/index.pug",
-    "build": "npx parcel build src/index.pug --no-optimize"
+    "start": "npx parcel serve src/index.pug --public-url /cat/",
+    "build": "npx parcel build src/index.pug --no-optimize --public-url /cat/"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "staticFiles": {
